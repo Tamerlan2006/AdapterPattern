@@ -1,14 +1,14 @@
 public class TranslatorAdapter implements RussianSpeaking{
-    private EnglishSpeaking englishToRussian;
+    private EnglishSpeaking english;
 
     public TranslatorAdapter() {
-        this.englishToRussian = new EnglishSpeaking();
+        this.english = new EnglishSpeaking();
     }
 
     @Override
     public void speakRussian(String text) {
         String translated = translateToEnglish(text);
-        englishToRussian.speakEnglish(translated);
+        english.speakEnglish(translated);
     }
 
     public String translateToEnglish(String russianText) {
